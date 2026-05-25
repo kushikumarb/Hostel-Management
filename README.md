@@ -34,34 +34,6 @@
 
 ---
 
-## 📐 System Architecture & Communication Flow
-
-The application bridges a modern user experience with static data security using an asynchronous request-response pattern.
-
-+---------------------------------------+
-|          ReactJS Client (UI)          | <--- (Handles State & Views)
-+---------------------------------------+
-│  ▲
-Asynchronous   │  │   JSON
-REST Calls    ▼  │  Payloads
-+---------------------------------------+
-|        Django Backend (Server)        | <--- (Processes Logic & Auth)
-+---------------------------------------+
-│  ▲
-Object      │  │   Relational
-Relational    ▼  │    Mapping
-+---------------------------------------+
-|             MySQL Database            | <--- (Data Persistence Layer)
-+---------------------------------------+
-
-
-1. **Client Layer (ReactJS):** Captures user inputs (e.g., submitting a complaint or allocating a room) and handles interface state changes.
-2. **API Communication:** Dispatches asynchronous REST network calls carrying JSON payloads across endpoints.
-3. **Server Layer (Django):** Standardized views parse incoming parameters, trigger authentication tokens, and communicate with database models.
-4. **Data Persistence Layer (MySQL):** Processes structured queries, safely updating student or asset metrics through normalized data mapping.
-
----
-
 ## 💻 Installation & Setup Instructions
 
 Follow these steps to run the complete environment locally on your machine.
